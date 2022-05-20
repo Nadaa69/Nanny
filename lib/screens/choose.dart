@@ -103,7 +103,8 @@ class _ChooseState extends State<Choose> {
                         name: 'Anna Oscar',
                         age: '24',
                         experience: '1 Year',
-                        specialist: 'ADHD',
+                        gender: 'Female',
+                        mobile: '01223647824',
                         photo:
                             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskJLDHmog5f4tWr28Odt1yilXTC9K0IdUXfBjJwbq08zUxwUt_RFbAnul6I0rowKuNns&usqp=CAU',
                         price: '360 per day'),
@@ -111,7 +112,8 @@ class _ChooseState extends State<Choose> {
                         name: 'Emily Edward',
                         age: '29',
                         experience: '5 Year',
-                        specialist: 'Normal',
+                        gender: 'Female',
+                        mobile: '01223645455',
                         photo:
                             'https://pf1.childcare.co.uk/5/fea5e/e9e32362.thumbnail.png',
                         price: '200 per day'),
@@ -119,7 +121,8 @@ class _ChooseState extends State<Choose> {
                         name: 'Olivia James',
                         age: '30',
                         experience: '9 Year',
-                        specialist: 'ADHD',
+                        gender: 'Female',
+                        mobile: '01055647824',
                         photo:
                             'https://media.cnn.com/api/v1/images/stellar/prod/190612160112-marly-higgins-driskell.jpg?q=w_3000,h_2000,x_0,y_0,c_fill',
                         price: '400 LE per day'),
@@ -127,7 +130,8 @@ class _ChooseState extends State<Choose> {
                         name: 'Emily Edward',
                         age: '29',
                         experience: '5 Year',
-                        specialist: 'Normal',
+                        gender: 'Male',
+                        mobile: '01558747800',
                         photo:
                             'https://pf1.childcare.co.uk/5/fea5e/e9e32362.thumbnail.png',
                         price: '200 per day'),
@@ -141,9 +145,10 @@ class _ChooseState extends State<Choose> {
 }
 
 Widget details({
+  mobile,
   name,
   age,
-  specialist,
+  gender,
   experience,
   price,
   photo,
@@ -153,8 +158,8 @@ Widget details({
     children: [
       SizedBox(height: 15),
       Container(
-        height: 220,
-        width: 330,
+        height: 236,
+        width: 350,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(50), color: Colors.grey[300]),
         child: Stack(
@@ -186,8 +191,8 @@ Widget details({
               ),
             ),
             Positioned(
-              left: 125,
-              top: 21,
+              left: 112,
+              top: 12,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -204,7 +209,7 @@ Widget details({
                           fontWeight: FontWeight.w500,
                           color: blackColor)),
                   SizedBox(height: 6),
-                  Text('Specialist: $specialist',
+                  Text('Gender: $gender',
                       style: TextStyle(
                           fontSize: 17,
                           fontWeight: FontWeight.w500,
@@ -217,6 +222,12 @@ Widget details({
                           color: blackColor)),
                   SizedBox(height: 6),
                   Text('Price: $price',
+                      style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500,
+                          color: blackColor)),
+                  SizedBox(height: 6),
+                  Text('PhoneNumber: $mobile',
                       style: TextStyle(
                           fontSize: 17,
                           fontWeight: FontWeight.w500,
